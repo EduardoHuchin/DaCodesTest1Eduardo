@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.venadostest.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_static"
+            app:destination="@id/nav_static"
+            app:popUpTo="@+id/nav_home" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_players"
+            app:destination="@id/nav_players"
+            app:popUpTo="@+id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_static"
+        android:name="com.example.venadostest.ui.statistics.StaticFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_static" />
+
+    <fragment
+        android:id="@+id/nav_players"
+        android:name="com.example.venadostest.ui.players.PlayerFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_player" />
+
+
+</navigation>

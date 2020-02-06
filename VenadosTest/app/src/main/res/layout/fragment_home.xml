@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLaoyaout"
+        app:elevation="4dp"
+        android:gravity="center"
+        android:background="@color/cardview_light_background"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/EscudoPrincipal"
+            android:layout_width="170dp"
+            android:layout_height="180dp"
+
+            app:srcCompat="@drawable/venadosfc" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        app:tabGravity="fill"
+        app:tabSelectedTextColor="@color/cardview_dark_background"
+        app:tabTextColor="@color/cardview_shadow_start_color"
+        app:tabMode="fixed"
+        android:background="@color/cardview_light_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        ></com.google.android.material.tabs.TabLayout>
+ 
+
+    <TextView
+
+
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGris"
+        android:textColor="@color/cardview_light_background"
+        android:textStyle="bold"
+        android:paddingLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="textStart"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/ViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.viewpager.widget.ViewPager>
+
+
+</LinearLayout>
